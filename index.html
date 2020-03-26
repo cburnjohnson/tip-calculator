@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="main.js" defer></script>
+        <title>Tip Calculator</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Tip Calculator</h1>
+            <form id="tipForm">
+                <div class="form-control">
+                    <label for="billAmount">How much was your bill?</label>
+                    <div>
+                        <span class="dollar-sign">$</span
+                        ><input
+                            type="number"
+                            name="billAmount"
+                            id="billAmount"
+                            step=".01"
+                            placeholder="00.00"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label for="serviceQuality">How was your service?</label>
+                    <select id="serviceQuality">
+                        <option value="bad">Bad</option>
+                        <option value="average">Average</option>
+                        <option value="good">Good</option>
+                        <option value="reallyGood">Really good</option>
+                    </select>
+                </div>
+
+                <button type="submit">Calculate</button>
+            </form>
+
+            <p id="tipAmount"></p>
+        </div>
+    </body>
+</html>
