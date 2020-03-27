@@ -21,6 +21,7 @@
                             id="billAmount"
                             step=".01"
                             placeholder="00.00"
+                            required
                         />
                     </div>
                 </div>
@@ -31,14 +32,16 @@
                         <option value="bad">Bad</option>
                         <option value="average">Average</option>
                         <option value="good">Good</option>
-                        <option value="reallyGood">Really good</option>
+                        <option value="amazing">Amazing</option>
                     </select>
                 </div>
 
                 <button type="submit">Calculate</button>
             </form>
 
-            <p id="tipAmount"></p>
+            <div id="tipAmountDiv">
+                <p>You should tip: $<span id="tipAmount"></span></p>
+            </div>
         </div>
     </body>
 </html>

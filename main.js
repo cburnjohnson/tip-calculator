@@ -4,8 +4,11 @@ tipForm.addEventListener('submit', e => {
     e.preventDefault();
     const billAmount = document.getElementById('billAmount').value;
     const serviceQuality = document.getElementById('serviceQuality').value;
+    const tipAmountEl = document.getElementById('tipAmount');
+    const tipAmountDiv = document.getElementById('tipAmountDiv');
+    tipAmountEl.innerHTML = '';
 
-    let tipAmount;
+    let tipAmount = 0;
 
     switch (serviceQuality) {
         case 'bad':
@@ -24,5 +27,8 @@ tipForm.addEventListener('submit', e => {
             break;
     }
 
-    console.log(tipAmount);
+    tipAmount = Math.floor(tipAmount * 100) / 100;
+
+    tipAmountDiv.style.opacity = 1;
+    tipAmountEl.append(tipAmount.toString());
 });
